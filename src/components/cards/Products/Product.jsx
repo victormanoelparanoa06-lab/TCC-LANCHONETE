@@ -9,7 +9,7 @@ function Product () {
     const [produtos, setProdutos] = useState([
         {id: 1, produto: 'Lanche', preco: 20, categoria: 'Lanches', estoque: 10, imagem: ImgHamburguer},
         {id: 2, produto: 'Suco', preco: 10, categoria: 'Sucos', estoque: 20, imagem: ImgSuco},
-        {id: 3, produto: 'Sobremesa', preco: 15, categoria: 'Sobremesas', estoque: 0, imagem: ImgSobremesa},
+        {id: 3, produto: 'Sobremesa', preco: 15, categoria: 'Sobremesas', estoque: 9, imagem: ImgSobremesa},
     ]); 
 
     function Comprar (productid, productname, productprice, productcategory) {
@@ -23,14 +23,14 @@ function Product () {
     return (
         <div className="containerproduct">
             {produtos.map((produto) => (
-                <div className="product" key={produto.id} style={produto.estoque == 0 ? {opacity: 0.5} : {opacity: 1}}>
-                    <img src={produto.imagem} alt={produto.produto} title={produto.produto} />
+                <div className={`container${produto.categoria}`} key={produto.id} style={produto.estoque == 0 ? {opacity: 0.5} : {opacity: 1}}>
+                    <img src={produto.imagem} className='imagemproduto' alt={produto.produto} title={produto.produto} />
                     <h2 style={{textAlign: 'center'}}>{produto.produto}</h2>
                     <p>R$ {produto.preco}</p>
-                    <p>Categoria: {produto.categoria}</p>
+                    <p>Categoria: <b id={produto.categoria}>{produto.categoria}</b></p>
                     {produto.estoque == 0 ? <p style={{color: 'red'}}>Produto indisponível</p> : <p style={{color: 'green'}}>{produto.estoque} disponíveis</p>}
-                    <Button title='Comprar' funcao={() => Comprar(produto.id, produto.produto, produto.preco, produto.categoria)}/>
-                    <Button title='Adicionar ao carrinho' funcao={() => AdicionarAoCarrinho(produto.id, produto.produto, produto.preco)}/>
+                    {produto.estoque == 0 ? <Button title='Comprar' classe='unavailable'/> : <Button title='Comprar' funcao={() => Comprar(produto.id, produto.produto, produto.preco, produto.categoria)}/>}
+                    {produto.estoque == 0 ? <Button title='Comprar' classe='unavailable'/> : <Button title='Adicionar ao carrinho' funcao={() => AdicionarAoCarrinho(produto.id, produto.produto, produto.preco)}/>}
                 </div>
             ))}
         </div>

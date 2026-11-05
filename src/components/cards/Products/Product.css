@@ -3,11 +3,11 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: 70vw;
+    
     gap: 24px;
 }
 
-.product {
+.containerLanches, .containerSucos, .containerSobremesas {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -15,6 +15,23 @@
     border-radius: 10px;
     background-color: #222;
     color: white;
+}
+
+.imagemproduto {
+    width: 30vh;
+    border-radius: 10px;
+}
+
+#Lanches {
+    color: rgb(255, 0, 0);
+}
+
+#Sucos {
+    color: orangered;
+}
+
+#Sobremesas {
+    color: brown;
 }
 
 .productunavailable {
@@ -25,10 +42,4 @@
     border-radius: 10px;
     background-color: #222;
     color: white;
-}
-
-.product img {
-    width: 30vh;
-    border-radius: 10px;
-    border: 1px solid white;
 }
