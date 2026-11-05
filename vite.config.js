@@ -5,6 +5,7 @@ import path from 'node:path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+
   resolve: {
     alias: {
       // Permite imports como: import Button from '@/components/common/Button/Button'
@@ -12,4 +13,3 @@ export default defineConfig({
     },
   },
 })
-
