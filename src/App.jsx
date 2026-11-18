@@ -1,7 +1,7 @@
 import Header from './components/layout/Header/Header.jsx';
+import Banner from './components/cards/Banner/Banner.jsx';
 import Footer from './components/layout/Footer/Footer.jsx';
 import Home from './pages/Home/Home.jsx';
-import Banner from './components/cards/Banner/Banner.jsx';
 
 function App () {
     return (
@@ -13,9 +13,7 @@ function App () {
                     <Banner/>
                 </section>
 
-                <section>
-                    <Home/>
-                </section>
+                <Home/>
             </main>
 
             <Footer/>

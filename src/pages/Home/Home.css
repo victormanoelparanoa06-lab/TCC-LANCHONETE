@@ -1,7 +1,8 @@
-.home {
+.home, section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 5px;
+    gap: 12px;
 }

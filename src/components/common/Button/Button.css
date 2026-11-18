@@ -14,3 +14,7 @@ button:hover {
 .unavailable {
     cursor: not-allowed;
 }
+
+.unavailable:hover {
+    background-color: white;
+}

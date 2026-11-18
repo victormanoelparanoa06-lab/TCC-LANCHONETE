@@ -3,11 +3,10 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    
     gap: 24px;
 }
 
-.containerLanches, .containerSucos, .containerSobremesas {
+.containerLanches, .containerSucos, .containerSobremesas, .productunavailable {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -32,14 +31,4 @@
 
 #Sobremesas {
     color: brown;
-}
-
-.productunavailable {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-    border-radius: 10px;
-    background-color: #222;
-    color: white;
 }
