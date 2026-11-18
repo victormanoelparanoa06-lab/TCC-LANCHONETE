@@ -9,16 +9,19 @@ import Product from '@/components/cards/Products/Product.jsx';
 import Cart from '@/components/cards/Cart/Cart.jsx';
 import HamburguerRain from "@/components/common/HamburguerRain/HamburguerRain.jsx";
 
-// Images
-import ImgHamburguer from '@/assets/images/lanches/hamburguer.png';
-import ImgSuco from '@/assets/images/sucos/suco.png';
-import ImgSobremesa from '@/assets/images/sobremesas/sobremesa.png';
-
 function Home () {
     const [produtos, setProdutos] = useState([
-        {id: 1, produto: 'Lanche', preco: 20, categoria: 'Lanches', estoque: 39, imagem: ImgHamburguer},
-        {id: 2, produto: 'Suco', preco: 10, categoria: 'Sucos', estoque: 20, imagem: ImgSuco},
-        {id: 3, produto: 'Sobremesa', preco: 15, categoria: 'Sobremesas', estoque: 0, imagem: ImgSobremesa}
+        {id: 1, produto: "Hambúrguer", preco: 20, categoria: "Lanches", estoque: 4, imagem: "https://img.magnific.com/fotos-gratis/delicioso-cheeseburger-classico-com-queijo-derretido-e-vegetais-frescos_272375-26468.jpg?semt=ais_hybrid&w=740&q=80" },
+        {id: 2, produto: "Cachorro-quente", preco: 15, categoria: "Lanches", estoque: 5, imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjAuvthvNNSZTSxqSE45hCbqJ6Bo08UbovjGHgxiPphQ&s=10"},
+        {id: 3, produto: "Batata Frita", preco: 10, categoria: "Frituras", estoque: 7, imagem: "https://beagaembalagem.com.br/wp-content/uploads/2021/06/batata-frita.jpeg"},
+        {id: 4, produto: "Pizza", preco: 20, categoria: "Massas", estoque: 2, imagem: "https://img.magnific.com/psd-premium/uma-pizza-com-azeitonas-tomates-e-azeitonas_1268410-858.jpg?semt=ais_hybrid&w=740&q=80"},
+        {id: 5, produto: "Espaguete", preco: 8, categoria: "Massas", estoque: 0, imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRePkDDOWLuI1qYbF_B9v1Bs03RgxNoz-NUmfiVacEUw&s=10"},
+        {id: 6, produto: "Panquecas", preco: 5 , categoria: "Massas", estoque: 0, imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkMbLTM6o7qrkHswspsF0oQIAqcfQwfoJDwcru5rOhxOHgroOf6EN9Ev3&s=10"},
+        {id: 7, produto: "Donuts", preco: 5 , categoria: "Doces", estoque: 10, imagem: "https://media.istockphoto.com/id/538335769/pt/foto/d%C3%B3nute-com-confeito-colorido-para-bolos-isolados.jpg?s=612x612&w=0&k=20&c=hqnBADd5WlEl5Lh4kcnty3rINoRVWuaI53_TenffGWY="},
+        {id: 8, produto: "Salada de frutas", preco: 5, categoria: "Frutas", estoque: 3, imagem: "https://receitanatureba.com/wp-content/uploads/2022/05/salada-de-frutas-simples.png"},
+        {id: 9, produto: "Sorvete", preco: 8, categoria: "Doces", estoque: 20, imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8pFDs2xEjJtKTR7k_ia69ESCZLrtFT9TlAa1ZE556Q&s=10"},
+        {id: 10, produto: "Refrigerante", preco: 5, categoria: "Bebidas", estoque: 18, imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStuaZPWIvBNPmHwV5aAcZDwyrev0bfKRQMv46WozRBXw&s=10"}
+
     ]); 
 
     // Carrinho
@@ -75,7 +78,7 @@ function Home () {
         if (ProdutosComprados === '') {
             alert('Seu carrinho está vazio.');
         } else {
-            alert('Compra efetuada com sucesso! | ' + ProdutosComprados + ' | Total: R$ ' + total);
+            alert('Compra efetuada com sucesso! | Produto: ' + ProdutosComprados + ' | Total: R$ ' + total);
             setCarrinho([]);
             handleComprar();
         }
@@ -111,7 +114,7 @@ function Home () {
 
             {carrinho.length === 0 ? '' : 
                 <div className="home">
-                    <h2>Carrinho</h2>
+                    <h2>🛒 Meu Carrinho</h2>
                     <Cart 
                         cart={carrinho} 
                         total={total}

@@ -6,7 +6,7 @@
     gap: 24px;
 }
 
-.containerLanches, .containerSucos, .containerSobremesas, .productunavailable {
+.containerLanches, .containerBebidas, .containerDoces, .containerMassas, .containerFrituras, .containerFrutas, .productunavailable {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -25,10 +25,22 @@
     color: rgb(255, 0, 0);
 }
 
-#Sucos {
-    color: orangered;
+#Bebidas {
+    color: rgb(94, 94, 255);
 }
 
-#Sobremesas {
+#Doces {
     color: brown;
+}
+
+#Frutas {
+    color: rgb(102, 170, 0);
+}
+
+#Frituras {
+    color: yellow;
+}
+
+#Massas {
+    color: burlywood;
 }

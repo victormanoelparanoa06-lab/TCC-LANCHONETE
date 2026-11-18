@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 // Css
 import './Cart.css';
 
@@ -17,7 +15,7 @@ function Cart ({cart, total, OnRemove, OnBuy, OnUpdate}) {
                     <img src={produto.imagem} alt="" className="productimg" />
                     <div className="infs">
                         <h2>{produto.produto}</h2>
-                        <p>R$ {(produto.preco).toFixed(2)}</p>
+                        <p>R$ {(produto.preco * produto.quantidade).toFixed(2)}</p>
                         <div>
                             <label htmlFor="">Quantidade: </label>
                             <input 
