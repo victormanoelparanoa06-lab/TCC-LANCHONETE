@@ -3,7 +3,7 @@ import './Header.css';
 function Header () {
     return (
         <header>
-            <h1>Lanchonete</h1>
+            <h1>🍔 LANCHONETE 🥤</h1>
         </header>
     )
 }

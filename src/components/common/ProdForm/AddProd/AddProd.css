@@ -1,0 +1,74 @@
+select {
+    height: 40px;
+    width: 300px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+
+select, ::picker(select) {
+    appearance: base-select;
+    align-items: center;
+    background-color: white;
+    color: grey;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: small;
+}
+
+::picker(select) {
+    border-radius: 10px;
+    position-try-fallbacks: none;
+}
+
+select:hover, select option:hover {
+    cursor: pointer;
+}
+
+select option {
+    color: black;
+    padding: 5px;
+}
+
+#Lanches {
+    color: rgb(255, 0, 0);
+}
+
+#Bebidas {
+    color: rgb(94, 94, 255);
+}
+
+#Doces {
+    color: brown;
+}
+
+#Frutas {
+    color: rgb(102, 170, 0);
+}
+
+#Frituras {
+    color: yellow;
+}
+
+#Massas {
+    color: burlywood;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    color: #222;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.label:hover {
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+}
