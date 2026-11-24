@@ -11,6 +11,8 @@ import Cart from '@/components/cards/Cart/Cart.jsx';
 import HamburguerRain from "@/components/common/HamburguerRain/HamburguerRain.jsx";
 import AccessForm from '@/components/common/AccessForm/AccessForm.jsx';
 import ProdForm from '@/components/common/ProdForm/ProdForm.jsx';
+import Filtro from '@/components/common/Filtro/Filtro.jsx';
+import Button from '@/components/common/Button/Button.jsx';
 
 function Home({ claro }) {
     // Array com o produtos
@@ -161,6 +163,8 @@ function Home({ claro }) {
         : produtos.filter((p) => p.categoria === filtro
         );
 
+    const [divFiltro, setDivFiltro] = useState();
+
     return (
         <section>
             <div className="containers">
@@ -174,15 +178,22 @@ function Home({ claro }) {
             <div className='containers'>
                 <h2 className={claro ? 'tituloclaro' : 'tituloescuro'}>🥪 CARDÁPIO</h2>
 
-                <select name="" id="" onChange={(e) => setFiltro(e.target.value)}>
-                    <option value="Todos">Todos</option>
-                    <option value="Lanches">Lanches</option>
-                    <option value="Frituras">Frituras</option>
-                    <option value="Massas">Massas</option>
-                    <option value="Doces">Doces</option>
-                    <option value="Frutas">Frutas</option>
-                    <option value="Bebidas">Bebidas</option>
-                </select>
+                <div className="containerfiltro" style={{alignSelf: 'start'}}>
+                    <Button 
+                        title='FILTRO'
+                        classe='button'
+                        funcao={() => setDivFiltro(!divFiltro)}
+                    />
+
+                    {divFiltro && 
+                        <Filtro
+                            filtro={filtro}
+                            setFiltro={setFiltro}
+                            setDivFiltro={setDivFiltro}
+                            claro={claro}
+                        />
+                    }
+                </div>
 
                 <Product
                     products={produtos}

@@ -33,6 +33,7 @@
     border-radius: 20px;
     background: transparent;
     padding: 0 10px 0 40px; 
+    box-shadow: none;
 }
 
 .pesquisaclaro {

@@ -68,7 +68,7 @@ function AddProd ({ AddCardapio, Cancelar, claro }) {
                 required
             />
 
-            <p>IMAGEM</p>
+            <p className={claro ? 'tituloclaro' : 'tituloescuro'}>IMAGEM</p>
 
             <input 
                 type="text" 
@@ -77,7 +77,7 @@ function AddProd ({ AddCardapio, Cancelar, claro }) {
                 onChange={(e) => setImagemProduto(e.target.value)}
             />
 
-            <p>OU</p>
+            <p className={claro ? 'tituloclaro' : 'tituloescuro'}>OU</p>
 
             <label htmlFor="arquivo" className='label'>IMPORTE UMA FOTO</label>
             <input 

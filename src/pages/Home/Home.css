@@ -5,6 +5,15 @@
     align-items: center;
     padding-top: 5px;
     gap: 12px;
+    width: 96%;
+}
+
+.containerfiltro {
+    width: 90%;
+}
+
+.containerfiltro {
+    align-items: end;
 }
 
 .tituloclaro {

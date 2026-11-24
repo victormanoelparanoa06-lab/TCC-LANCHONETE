@@ -1,11 +1,10 @@
 // Css
-import { useState } from 'react';
 import './Product.css';
 
 // Components
 import Button from '@/components/common/Button/Button.jsx';
 
-function Product ({ products, filtroProduto, OnAdd, claro }) {
+function Product ({ filtroProduto, OnAdd, claro }) {
 
     return (
         <div className="containerproduct">

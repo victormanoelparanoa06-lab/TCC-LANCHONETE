@@ -1,0 +1,57 @@
+.divinputradioescuro, .divinputradioclaro {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-self: start;
+    padding: 10px;
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 20px;
+    z-index: 200;
+    position: absolute;
+}
+
+.divinputradioescuro {
+    background-color: #222;
+    border: 2px solid #444;
+}
+
+.divinputradioclaro {
+    background-color: #C9B693;
+    border: 2px solid white;
+}
+
+.closeicon {
+    align-self: end;
+}
+
+.labelfiltro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    gap: 4px;
+}
+
+input[type="radio"] {
+    box-shadow: none;
+    width: 12px;
+    accent-color: #967E50;
+}
+
+input[type="radio"]:focus {
+    outline: none;
+}
+
+@media (max-width: 1200px) {
+    .labelfiltro {
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 800px) {
+    .labelfiltro {
+        font-size: xx-small;
+    }
+}

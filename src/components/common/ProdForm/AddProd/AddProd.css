@@ -18,8 +18,8 @@ select, ::picker(select) {
 }
 
 ::picker(select) {
-    border-radius: 10px;
     position-try-fallbacks: none;
+    border-radius: 10px;
 }
 
 select:hover, select option:hover {
@@ -51,7 +51,7 @@ select option {
 }
 
 @media (max-width: 1200px) {
-    select, .label {
+    .selectcategoria, .label {
         font-size: x-small;
         width: 230px;
     }
