@@ -42,11 +42,7 @@ Aqui, é feito o cálculo do preço total de todos os produtos que estão no car
 
 <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Logo React" width="50" title="Logo React">
 
-Esse projeto foi inteiramente construido com o **React**, onde, dentro dele, escrevemos nosso HTML, CSS e JavaScript.  
-
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="Logo HTML" width="50" title="Logo HTML">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="Logo CSS" width="50" title="Logo CSS">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo7GsaRsmr6U8UMf6wI2idYKcanqHG9HFNUYNR2sTCTPb0lWVYy4C7DuGP&s=10" alt="Logo CSS" width="50" title="Logo CSS">
+Esse projeto foi inteiramente construído com o **React**, onde, dentro dele, escrevemos nosso HTML, CSS e JavaScript.  
 
 Ele serve para facilitar a criação de interfaces de usuário interativas e organizadas em aplicações web.  
 
