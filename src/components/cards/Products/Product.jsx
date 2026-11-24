@@ -15,7 +15,7 @@ function Product ({ filtroProduto, OnAdd, claro }) {
                     {produto.preco == 0 ? <p style={{color: 'green'}}>Grátis!</p> : <p>R$ {produto.preco.toFixed(2).replace(".", ",")}</p>}
                     <p>Categoria: <b id={produto.categoria}>{produto.categoria}</b></p>
                     {produto.estoque == 0 ? <p style={{color: 'red'}}>Produto indisponível</p> : <p style={{color: 'green', fontWeight: 700}}>{produto.estoque} disponíveis</p>}
-                    {produto.estoque == 0 ? <Button title='ADICIONAR AO CARRINHO' classe='unavailable'/> : <Button title='ADICIONAR AO CARRINHO' funcao={() => OnAdd(produto)} classe='button'/>}
+                    {produto.estoque == 0 ? <Button title='ADICIONAR AO CARRINHO' classe='unavailable'/> : <a href="#cart" style={{textDecoration: 'none'}}><Button title='ADICIONAR AO CARRINHO' funcao={() => OnAdd(produto)} classe='button'/></a>}
                 </div>
             ))}
         </div>

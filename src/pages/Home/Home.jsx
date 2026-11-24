@@ -204,7 +204,7 @@ function Home({ claro }) {
             </div>
 
             {carrinho.length === 0 ? '' :
-                <div className="containers">
+                <div className="containers" id='cart'>
                     <h2 className={claro ? 'tituloclaro' : 'tituloescuro'}>🛒 MEU CARRINHO</h2>
                     <Cart
                         cart={carrinho}
