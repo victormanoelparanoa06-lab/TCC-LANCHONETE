@@ -4,8 +4,8 @@ Esse projeto de TCC foi construido em grupo com o objetivo de colocar em prátic
 
 ## Sobre o site
 
-![Imagem da tela inicial](public/Readme/Início.png)
-Imagem da tela inicial
+![Imagem da tela inicial](public/Readme/Lanchonete.png)
+Imagem do site
 
 O principal objetivo do nosso site OnePage, em um cenário fictício, é que o cliente possa visualizar nosso cardápio e comprar os produtos de forma interativa.
 
@@ -40,9 +40,11 @@ Aqui, é feito o cálculo do preço total de todos os produtos que estão no car
 
 ## Sobre o projeto
 
-<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Logo React" width="50" title="Logo React">
-
 Esse projeto foi inteiramente construído com o **React**, onde, dentro dele, escrevemos nosso HTML, CSS e JavaScript.  
+
+<div align="center">
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Logo React" width="50" title="Logo React">
+</div>
 
 Ele serve para facilitar a criação de interfaces de usuário interativas e organizadas em aplicações web.  
 
