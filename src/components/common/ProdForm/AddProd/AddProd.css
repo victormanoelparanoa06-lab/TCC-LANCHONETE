@@ -31,30 +31,6 @@ select option {
     padding: 5px;
 }
 
-#Lanches {
-    color: rgb(255, 0, 0);
-}
-
-#Bebidas {
-    color: rgb(94, 94, 255);
-}
-
-#Doces {
-    color: brown;
-}
-
-#Frutas {
-    color: rgb(102, 170, 0);
-}
-
-#Frituras {
-    color: yellow;
-}
-
-#Massas {
-    color: burlywood;
-}
-
 .label {
     display: flex;
     align-items: center;
@@ -66,9 +42,17 @@ select option {
     color: #222;
     transition: all 0.3s ease;
     font-weight: 600;
+    font-size: small;
 }
 
 .label:hover {
     cursor: pointer;
     background-color: rgb(219, 219, 219);
+}
+
+@media (max-width: 1200px) {
+    select, .label {
+        font-size: x-small;
+        width: 230px;
+    }
 }

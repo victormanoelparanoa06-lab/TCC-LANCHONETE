@@ -1,0 +1,78 @@
+.pesquisadiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+}
+
+.containerpesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.searchicon {
+    position: absolute;
+    padding-left: 10px;
+    width: 36px;
+}
+
+.closeicon {
+    position: absolute;
+    width: 20px;   
+    right: 12px; 
+}
+
+.closeicon:hover {
+    cursor: pointer;
+}
+
+.pesquisaclaro, .pesquisaescuro {
+    border-radius: 20px;
+    background: transparent;
+    padding: 0 10px 0 40px; 
+}
+
+.pesquisaclaro {
+    border: 2px solid #C9B693;
+    color: #C9B693;
+}
+
+.pesquisaescuro {
+    border: 2px solid white;
+    color: white;
+}
+
+.pesquisaclaro:focus, .pesquisaescuro:focus {
+    outline: none;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: x-large;
+    }
+
+    header a, .resultados {
+        font-size: small;
+    }
+}
+
+@media (max-width: 800px) {
+    header h1 {
+        font-size: large;
+    }
+
+    header a, .resultados {
+        font-size: x-small;
+    }
+}

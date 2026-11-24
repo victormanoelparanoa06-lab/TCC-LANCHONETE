@@ -3,5 +3,16 @@ footer {
     justify-content: center;
     align-items: center;
     height: 8vh;
+}
+
+.footerescuro {
     background-color: #222;
+    border-top: 2px solid #444;
+    box-shadow: 0 0 8px #222;
+}
+
+.footerclaro {
+    background-color: #C9B693;
+    border-top: 2px solid #ffffff;
+    box-shadow: 0 0 8px #C9B693;
 }

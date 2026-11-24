@@ -6,20 +6,48 @@
     gap: 24px;
 }
 
-.containerLanches, .containerBebidas, .containerDoces, .containerMassas, .containerFrituras, .containerFrutas, .productunavailable {
+.containerLanchesClaro, 
+.containerBebidasClaro,
+.containerDocesClaro, 
+.containerMassasClaro, 
+.containerFriturasClaro, 
+.containerFrutasClaro, 
+.productunavailableClaro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
     gap: 10px;
     border-radius: 10px;
-    background-color: #222;
     color: white;
+    background-color: #C9B693;
+    border: 2px solid white;
+    box-shadow: 0 0 8px #C9B693;
+}
+
+.containerLanchesEscuro, 
+.containerBebidasEscuro,
+.containerDocesEscuro, 
+.containerMassasEscuro, 
+.containerFriturasEscuro, 
+.containerFrutasEscuro, 
+.productunavailableEscuro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #222;
+    border: 2px solid #444;
+    box-shadow: 0 0 8px #222;
 }
 
 .imagemproduto {
     width: 30vh;
     border-radius: 10px;
+    align-self: center;
 }
 
 #Lanches {
@@ -31,11 +59,11 @@
 }
 
 #Doces {
-    color: brown;
+    color: rgb(104, 50, 0);
 }
 
 #Frutas {
-    color: rgb(102, 170, 0);
+    color: rgb(0, 255, 0);
 }
 
 #Frituras {
@@ -43,5 +71,25 @@
 }
 
 #Massas {
-    color: burlywood;
+    color: rgb(204, 139, 0);
+}
+
+@media (max-width: 1200px) {
+    .containerproduct {
+        font-size: smaller;
+    }
+
+    .imagemproduto {
+        width: 20vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .containerproduct {
+        font-size: x-small;
+    }
+
+    .imagemproduto {
+        width: 10vh;
+    }
 }

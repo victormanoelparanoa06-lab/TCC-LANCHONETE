@@ -1,4 +1,8 @@
 .button, .unavailable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     height: 40px;
     border: 0;
@@ -14,10 +18,23 @@
 }
 
 .button:hover {
-    background-color: burlywood;
+    background-color: #634C21;
     color: white;
 }
 
 .unavailable {
     cursor: default;
+}
+
+@media (max-width: 1200px) {
+    .button, .unavailable {
+        font-size: smaller;
+        height: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .button, .unavailable {
+        font-size: x-small;
+    }
 }

@@ -7,12 +7,18 @@ import './AddProd.css';
 // Components
 import Button from '@/components/common/Button/Button.jsx';
 
-function AddProd ({ funcao, setAcesso }) {
+function AddProd ({ AddCardapio, Cancelar, claro }) {
     const [nomeProduto, setNomeProduto] = useState('');
     const [categoriaProduto, setCategoriaProduto] = useState('');
     const [precoProduto, setPrecoProduto] = useState('');
     const [estoqueProduto, setEstoqueProduto] = useState('');
     const [imagemProduto, setImagemProduto] = useState('');
+
+    if (precoProduto < 0 || estoqueProduto < 0) {
+        alert('O preço e o estoque do produto não podem ser negativos!');
+        setPrecoProduto('');
+        setEstoqueProduto('');
+    }   
 
     function carregarImagem (e) {
         const arquivo = e.target.files[0];
@@ -24,7 +30,7 @@ function AddProd ({ funcao, setAcesso }) {
 
     return (
         <form action="" className='form'>
-            <h2>Adicionar Produto</h2>
+            <h2 className={claro ? 'tituloclaro' : 'tituloescuro'}>Adicionar Produto</h2>
 
             <input 
                 type="text" 
@@ -34,8 +40,8 @@ function AddProd ({ funcao, setAcesso }) {
                 required
             />
 
-            <select name="" id="" onChange={(e) => setCategoriaProduto(e.target.value)} required>
-                <option defaultValue={'Selecione a categoria do produto'}>Selecione a categoria do produto</option>
+            <select name="" id="" onChange={(e) => setCategoriaProduto(e.target.value)}>
+                <option defaultValue={'Selecione a categoria do produto'} hidden>Selecione a categoria do produto</option>
                 <option value="Lanches" id='Lanches'>Lanches</option>
                 <option value="Frituras" id='Frituras'>Frituras</option>
                 <option value="Massas" id='Massas'>Massas</option>
@@ -48,6 +54,7 @@ function AddProd ({ funcao, setAcesso }) {
                 type="number" 
                 placeholder='Digite o preço do produto' 
                 value={precoProduto}
+                min={0}
                 onChange={(e) => setPrecoProduto(e.target.value)}
                 required
             />
@@ -56,6 +63,7 @@ function AddProd ({ funcao, setAcesso }) {
                 type="number" 
                 placeholder='Digite o estoque do produto' 
                 value={estoqueProduto}
+                min={0}
                 onChange={(e) => setEstoqueProduto(e.target.value)}
                 required
             />
@@ -82,8 +90,8 @@ function AddProd ({ funcao, setAcesso }) {
             />
 
             <div className="botoes">
-                <Button title='ADICIONAR' classe='button' funcao={() => funcao(nomeProduto, categoriaProduto, precoProduto, estoqueProduto, imagemProduto)}/>
-                <Button title='CANCELAR' classe='button' funcao={() => setAcesso(false)}/>
+                <Button title='ADICIONAR' classe='button' funcao={() => AddCardapio(nomeProduto, categoriaProduto, precoProduto, estoqueProduto, imagemProduto)}/>
+                <Button title='CANCELAR' classe='button' funcao={() => Cancelar('')}/>
             </div>
         </form>
     )

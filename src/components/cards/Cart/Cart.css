@@ -5,7 +5,7 @@
     gap: 12px;
 }
 
-.product {
+.productclaro, .productescuro {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -14,7 +14,18 @@
     gap: 12px;
     width: 280px;
     border-radius: 10px;
+}
+
+.productclaro {
+    background-color: #C9B693;
+    box-shadow: 0 0 8px #C9B693;
+    border: 2px solid white;
+}
+
+.productescuro {
     background-color: #222;
+    box-shadow: 0 0 8px #222;
+    border: 2px solid #444;
 }
 
 .productimg {
@@ -40,4 +51,16 @@
 
 .close:hover {
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .cart, .productclaro, .productescuro {
+        font-size: small;
+    }
+}
+
+@media (max-width: 800px) {
+    .cart, .productclaro, .productescuro {
+        font-size: x-small;
+    }
 }

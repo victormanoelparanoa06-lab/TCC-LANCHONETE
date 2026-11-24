@@ -7,11 +7,11 @@ import Button from '@/components/common/Button/Button.jsx';
 // Images
 import Close from '@/assets/images/icons/close.png';
 
-function Cart ({cart, total, OnRemove, OnBuy, OnUpdate}) {
+function Cart ({cart, total, OnRemove, OnBuy, OnUpdate, claro}) {
     return (
         <div className="cart">
             {cart.map((produto) => (
-                <div className="product" key={produto.id}>
+                <div className={claro ? 'productclaro' : 'productescuro'} key={produto.id}>
                     <img src={produto.imagem} alt="" className="productimg" />
                     <div className="infs">
                         <h2>{produto.produto}</h2>
@@ -32,7 +32,7 @@ function Cart ({cart, total, OnRemove, OnBuy, OnUpdate}) {
                     <img src={Close} alt="Remover produto" title="Remover produto" className="close" onClick={() => OnRemove(produto)}/>
                 </div>
             ))}
-            <p>Total: R$ {total.toFixed(2).replace(".", ",")}</p>
+            <p className={claro ? 'titulo' : undefined}>Total: <b>R$ {total.toFixed(2).replace(".", ",")}</b></p>
             <Button title="COMPRAR" classe='button' funcao={() => OnBuy(cart)}/>
         </div>
     )

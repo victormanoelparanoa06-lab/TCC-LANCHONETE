@@ -1,12 +1,66 @@
 header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    position: fixed;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
     height: 12vh;
-    background-color: #222;
+    width: 100%;
+    z-index: 1000;
+}
+
+header a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: white;
+}
+
+header a:hover {
+    color: rgb(206, 206, 206);
 }
 
 header h1 {
     font-weight: 700;
+}
+
+header img {
+    width: 30px;
+}
+
+header img:hover {
+    cursor: pointer;
+}
+
+.headerescuro {
+    border-bottom: 2px solid #444;
+    box-shadow: 0 0 8px #222;
+    background-color: #222;
+}
+
+.headerclaro {
+    background-color: #C9B693;
+    border-bottom: 2px solid #ffffff;
+    box-shadow: 0 0 8px #C9B693;
+}
+
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: x-large;
+    }
+
+    header a {
+        font-size: small;
+    }
+}
+
+@media (max-width: 800px) {
+    header h1 {
+        font-size: large;
+    }
+
+    header a {
+        font-size: x-small;
+    }
 }

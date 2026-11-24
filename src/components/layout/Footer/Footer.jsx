@@ -1,8 +1,8 @@
 import './Footer.css';
 
-function Footer () {
+function Footer ({ claro }) {
     return (
-        <footer>
+        <footer className={claro ? 'footerclaro' : 'footerescuro'}>
             <p>TCC Lanchonete - 2026</p>
         </footer>
     )

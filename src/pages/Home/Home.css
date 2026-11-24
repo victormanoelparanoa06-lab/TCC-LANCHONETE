@@ -6,3 +6,23 @@
     padding-top: 5px;
     gap: 12px;
 }
+
+.tituloclaro {
+    color: #967E50;
+}
+
+.tituloescuro {
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .tituloclaro, .tituloescuro {
+        font-size: larger;
+    }
+}
+
+@media (max-width: 800px) {
+    .tituloclaro, .tituloescuro {
+        font-size: medium;
+    }
+}

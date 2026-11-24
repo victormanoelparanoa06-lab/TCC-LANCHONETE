@@ -1,0 +1,22 @@
+.divconfirmclaro, .divconfirmescuro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 5px;
+    width: 500px;
+    height: 200px;
+    gap: 24px;
+    border-radius: 20px;
+}
+
+.divconfirmclaro {
+    background-color: #C9B693;
+    border: 2px solid white;
+}
+
+.divconfirmescuro {
+    background-color: #222;
+    border: 2px solid #444;
+}

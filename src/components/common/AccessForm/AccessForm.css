@@ -5,3 +5,14 @@ input {
     border-radius: 10px;
     border: none;
 }
+
+input:focus {
+    outline: 2px solid #C9B693;
+}
+
+@media (max-width: 1200px) {
+    input {
+        font-size: x-small;
+        width: 230px;
+    }
+}

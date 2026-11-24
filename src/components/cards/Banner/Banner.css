@@ -1,17 +1,63 @@
-.banner {
+.bannerclaro, .bannerescuro {
+    position: relative; /* Adicionado para prender as imagens dentro do banner */
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-self: center;
     align-items: center;
-    height: 500px;
-    width: 1000px;
-    background-color: #222;
+    height: 506px;
+    width: 900px;
     border-radius: 14px;
+    overflow: hidden; /* Garante que nada ultrapasse as bordas de 14px */
 }
 
-.banner img {
+.bannerclaro {
+    border: 2px solid #fff;
+    box-shadow: 0 0 8px #C9B693;
+}
+
+.bannerescuro {
+    border: 2px solid #444;
+    box-shadow: 0 0 8px 5px #222;
+}
+
+.bannerclaro img, .bannerescuro img {
+    position: absolute; /* Faz as duas imagens ocuparem exatamente o mesmo espaço */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Evita que as imagens fiquem esticadas/distorcidas */
     border-radius: 14px;
+    transition: opacity 1s ease-in-out; /* Cria o efeito suave de 1 segundo */
+}
+
+/* Classes que controlam qual imagem aparece */
+.bannerclaro img.visible, .bannerescuro img.visible{
+    opacity: 1;
+}
+
+.bannerclaro img.hidden, .bannerescuro img.hidden {
+    opacity: 0;
+}
+
+@media (max-width: 1200px) {
+    .bannerclaro, .bannerescuro {
+        height: 393px;
+        width: 700px;
+    }
+}
+
+@media (max-width: 800px) {
+    .bannerclaro, .bannerescuro {
+        height: 225px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .bannerclaro, .bannerescuro {
+        height: 168px;
+        width: 300px;
+    }
 }
