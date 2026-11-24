@@ -1,14 +1,15 @@
 .divinputradioescuro, .divinputradioclaro {
     display: flex;
     flex-direction: column;
+    position: absolute;
     align-items: start;
     justify-self: start;
     padding: 10px;
     margin-top: 10px;
     width: 200px;
     border-radius: 20px;
+    font-size: smaller;
     z-index: 200;
-    position: absolute;
 }
 
 .divinputradioescuro {
@@ -48,10 +49,18 @@ input[type="radio"]:focus {
     .labelfiltro {
         font-size: x-small;
     }
+
+    .divinputradioclaro, .divinputradioescuro {
+        font-size: small;
+    }
 }
 
 @media (max-width: 800px) {
     .labelfiltro {
         font-size: xx-small;
+    }
+
+    .divinputradioclaro, .divinputradioescuro {
+        font-size: x-small;
     }
 }

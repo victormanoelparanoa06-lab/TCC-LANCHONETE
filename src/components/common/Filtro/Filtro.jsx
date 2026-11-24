@@ -14,6 +14,8 @@ function Filtro ({ filtro, setFiltro, setDivFiltro, claro }) {
                 onClick={() => setDivFiltro(false)} 
             />
 
+            <p>Filtro atual: <b>{filtro}</b></p>
+
             <label htmlFor="" className="labelfiltro">
                 <input
                     type="radio"

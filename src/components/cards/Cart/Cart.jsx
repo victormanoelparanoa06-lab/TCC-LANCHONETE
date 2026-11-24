@@ -33,7 +33,7 @@ function Cart ({cart, total, OnRemove, OnBuy, OnUpdate, claro}) {
                 </div>
             ))}
             <p className={claro ? 'titulo' : undefined}>Total: <b>R$ {total.toFixed(2).replace(".", ",")}</b></p>
-            <a href="#inicio"><Button title="COMPRAR" classe='button' funcao={() => OnBuy(cart)}/></a>
+            <a href="#inicio" style={{textDecoration: 'none'}}><Button title="COMPRAR" classe='button' funcao={() => OnBuy(cart)}/></a>
         </div>
     )
 }
